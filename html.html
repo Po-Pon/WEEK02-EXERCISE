@@ -53,6 +53,44 @@
         </p>
         <div id="ex1">
             <!-- ใส่โค้ดสร้างตารางใน div นี้ -->
+            <table style="width: 50%;">
+                <tr>
+                    <th colspan="5" style="background-color:dodgerblue; color:white; text-align: right;">Invoice</th>
+                </tr>
+                <tr>
+                    <th rowspan="2"><img src="assets\it-logo.png" style="width:150px; height:150px;"></th>
+                    <th>ID</th>
+                    <td>62070134</td>
+                    <th>Date</th>
+                    <td>22/01/2021</td>
+                </tr>
+                <tr>
+                    <th colspan="2">Name</th>
+                    <td colspan="2">นายพลัฏฐ์ วงศ์สิทธิพรรุ่ง</td>
+                </tr>
+                <tr>
+                    <th colspan="5" style="text-align: center;">Order</th>
+                </tr>
+                <tr>
+                    <td colspan="3">Monitor 24 inch</td>
+                    <td>x1</td>
+                    <td>3900</td>
+                </tr>
+                <tr>
+                    <td colspan="3">Ram 4 GB</td>
+                    <td>x2</td>
+                    <td>3200</td>
+                </tr>
+                <tr>
+                    <td colspan="3">Fan</td>
+                    <td>x3</td>
+                    <td>120</td>
+                </tr>
+                <tr>
+                    <th colspan="4" style="text-align: right;">Total</th>
+                    <td style="background-color:yellow;">7220 ฿</td>
+                </tr>
+            </table>
         </div>
 
         <!-- ข้อ 2 Form-->
@@ -82,20 +120,38 @@
         </p>
         <form id="form">
             <!-- สร้างฟอร์มต่อจากนี้เลยยย -->
+            <select name="prename">
+                <option value="นาย">นาย</option>
+                <option value="นาง">นาง</option>
+                <option value="นางสาว">นางสาว</option>
+            </select>
+            <label for="prename">ชื่อจริง:</label>
+            <input name="fname" type="text">
+            <label for="fname">นามสกุล:</label>
+            <input name="lname" type="text"><br>
+            <label for="dob">วันเกิด:</label>
+            <input type="date" name="dob">
+            <label for="age">อายุ:</label>
+            <input type="number" name="age"><br>
+            <p>ชั้นปี</p>
+            <input type="radio" name="year" value="1">
+            <label for="year">ปี 1 </label>
+            <input type="radio" name="year" value="2">
+            <label for="year">ปี 2 </label>
+            <input type="radio" name="year" value="3">
+            <label for="year">ปี 3 </label>
+            <input type="radio" name="year" value="4">
+            <label for="year">ปี 4 </label><br>
+            <input type="checkbox" name="subscribe">
+            <label for="subscribe">Subscribe News</label><br>
+            <input type="checkbox" name="accept">
+            <label for="accept">Accept the agreement</label><br>
+            <input type="submit" value="Submit">
         </form>
 
         <!-- ส่วนสำหรับแสดงข้อมูลจาก Form -->
         <p id="data"></p>
     </div>
-
-
-
-
-
-
-
-
-
     <!-- ส่วนสำหรับแสดงข้อมูลจาก Form -->
     <script>
         let form = document.getElementById('form');
